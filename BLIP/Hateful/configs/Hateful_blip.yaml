@@ -1,0 +1,49 @@
+train_file: '/mnt/raid/yangcp/data/hateful_memes/ALBEF/train.json'
+val_seen_file: '/mnt/raid/yangcp/data/hateful_memes/ALBEF/dev_seen.json'                
+val_unseen_file: '/mnt/raid/yangcp/data/hateful_memes/ALBEF/dev_unseen.json'                
+test_seen_file: '/mnt/raid/yangcp/data/hateful_memes/ALBEF/test_seen.json'
+test_unseen_file: '/mnt/raid/yangcp/data/hateful_memes/ALBEF/test_unseen.json'
+
+image_root: '/mnt/raid/yangcp/data/hateful_memes/img'
+
+
+train_file_t: '/workspace/twitter/ALBEF/train.json'
+val_file_t: '/workspace/twitter/ALBEF/val.json'                
+test_file_t: '/workspace/twitter/ALBEF/test.json'
+
+image_root_t: '/workspace/twitter/img/dataset_image'
+
+
+image_res: 224
+batch_size_train: 8
+batch_size_test: 128 
+
+alpha: 0.4
+distill: False
+warm_up: False
+
+bert_config: './configs/config_bert.json'
+
+optimizer: {opt: adamW, lr: 2e-5, weight_decay: 0.02}
+
+pretrained: '/mnt/raid/yangcp/checkpoint/BLIP/model_base.pth'
+#size of vit model; base or large
+vit: 'base'
+vit_grad_ckpt: False
+vit_ckpt_layer: 0
+max_epoch: 21
+
+image_size: 224
+
+# optimizer
+weight_decay: 0.05
+init_lr: 1e-5
+min_lr: 0
+
+
+
+
+
+
+
+
