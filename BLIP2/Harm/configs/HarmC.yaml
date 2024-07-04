@@ -1,0 +1,31 @@
+train_file: '/mnt/raid/yangcp/data/Harm_C/ALBEF/train.json'
+val_seen_file: '/mnt/raid/yangcp/data/Harm_C/ALBEF/val.json'                
+test_seen_file: '/mnt/raid/yangcp/data/Harm_C/ALBEF/test.json'
+
+image_root: '/mnt/raid/yangcp/data/Harm_C/images'
+
+
+image_res: 224
+batch_size_train: 4
+batch_size_test: 4 
+
+alpha: 0.4
+distill: False
+warm_up: False
+
+bert_config: '/home/yangcp/ALBEF/configs/config_bert.json'
+config: '/home/yangcp/ALBEF/configs/config.json'
+
+
+optimizer: {opt: adamW, lr: 2e-5, weight_decay: 0.02}
+schedular: {sched: cosine, lr: 2e-5, epochs: 20, min_lr: 1e-6, decay_rate: 1, warmup_lr: 1e-5, warmup_epochs: 1, cooldown_epochs: 0}
+
+
+
+
+
+
+
+
+
+
