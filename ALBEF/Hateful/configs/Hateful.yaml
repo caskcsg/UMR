@@ -1,0 +1,40 @@
+train_file: '/home/luwang/ycp/HM/Harm/Data/FHM/ALBEF/train.json'
+val_seen_file: '/home/luwang/ycp/HM/Harm/Data/FHM/ALBEF/dev_seen.json'                
+val_unseen_file: '/home/luwang/ycp/HM/Harm/Data/FHM/ALBEF/dev_unseen.json'                
+test_seen_file: '/home/luwang/ycp/HM/Harm/Data/FHM/ALBEF/test_seen.json'
+test_unseen_file: '/home/luwang/ycp/HM/Harm/Data/FHM/ALBEF/test_unseen.json'
+
+image_root: '/home/luwang/ycp/HM/Harm/Data/FHM/img'
+
+
+train_file_t: '/workspace/twitter/ALBEF/train.json'
+val_file_t: '/workspace/twitter/ALBEF/val.json'                
+test_file_t: '/workspace/twitter/ALBEF/test.json'
+
+image_root_t: '/workspace/twitter/img/dataset_image'
+
+
+image_res: 384
+batch_size_train: 16
+batch_size_test: 128 
+
+alpha: 0.4
+distill: False
+warm_up: False
+
+bert_config: '/home/luwang/ycp/HM/ALBEF/ALBEF_CEN/Hateful/configs/config_bert.json'
+config: '/home/luwang/ycp/HM/ALBEF/ALBEF_CEN/Hateful/configs/config.json'
+
+
+optimizer: {opt: adamW, lr: 2e-5, weight_decay: 0.02}
+schedular: {sched: cosine, lr: 2e-5, epochs: 20, min_lr: 1e-6, decay_rate: 1, warmup_lr: 1e-5, warmup_epochs: 1, cooldown_epochs: 0}
+
+
+
+
+
+
+
+
+
+

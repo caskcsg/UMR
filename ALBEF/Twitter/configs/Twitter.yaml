@@ -1,0 +1,25 @@
+train_file_t: '/mnt/raid/yangcp/data/twitter/ALBEF/train.json'
+val_file_t: '/mnt/raid/yangcp/data/twitter/ALBEF/val.json'                
+test_file_t: '/mnt/raid/yangcp/data/twitter/ALBEF/test.json'
+
+image_root_t: '/mnt/raid/yangcp/data/twitter/dataset_image'
+
+
+image_res: 384
+batch_size_train: 16
+batch_size_test: 128
+
+alpha: 0.4
+distill: False
+warm_up: False
+
+bert_config: '/home/yangcp/ALBEF/configs/config_bert.json'
+config: '/home/yangcp/ALBEF/configs/config.json'
+
+optimizer: {opt: adamW, lr: 2e-5, weight_decay: 0.02}
+schedular: {sched: cosine, lr: 2e-5, epochs: 20, min_lr: 1e-6, decay_rate: 1, warmup_lr: 1e-5, warmup_epochs: 1, cooldown_epochs: 0}
+
+
+
+
+

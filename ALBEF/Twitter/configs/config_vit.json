@@ -1,0 +1,8 @@
+{
+  "img_size": 384,
+  "patch_size": 16,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "output_hidden_states": "True"
+}
